@@ -1,0 +1,53 @@
+{
+  "training": {
+    "optimizer": "adam",
+    "learning_rate": 0.0003,
+    "max_norm": 3.0,
+    "epochs": 5000,
+    "batches_per_report": 200,
+    "batches_per_sampling": 500,
+    "random_seed": 1
+  },
+  "data": {
+    "dataset_1": "data/new/sentiment.train.1",
+    "dataset_2": "data/new/sentiment.train.2",
+    "dataset_3": "data/new/sentiment.train.3",
+    "dataset_4": "data/new/sentiment.train.4",
+    "dataset_5": "data/new/sentiment.train.5",
+    "src": "data/yelp/sentiment.train.0",
+    "tgt": "data/yelp/sentiment.train.1",
+    "src_test": "data/yelp/reference.test.0",
+    "tgt_test": "data/yelp/reference.test.1",
+    "src_test_1": "data/new/sentiment.test.1",
+    "src_test_2": "data/new/sentiment.test.2",
+    "src_test_3": "data/new/sentiment.test.3",
+    "src_test_4": "data/new/sentiment.test.4",
+    "src_test_5": "data/new/sentiment.test.5",
+    "tgt_test_1": "data/new/sentiment.test.1",
+    "tgt_test_2": "data/new/sentiment.test.2",
+    "tgt_test_3": "data/new/sentiment.test.3",
+    "tgt_test_4": "data/new/sentiment.test.4",
+    "tgt_test_5": "data/new/sentiment.test.5",
+    "src_vocab": "data/new/vocab.txt",
+    "tgt_vocab": "data/new/vocab.txt",
+    "share_vocab": true,
+    "attribute_vocab": "data/yelp/ngram.15.attribute",
+    "ngram_attributes": true,
+    "batch_size": 256,
+    "max_len": 50,
+    "working_dir": "working_dir"
+  },
+    "model": {
+        "model_type": "delete_retrieve",
+        "emb_dim": 128,
+        "attention": false,
+        "encoder": "lstm",
+        "src_hidden_dim": 128,
+        "src_layers": 1,
+        "bidirectional": true,
+        "tgt_hidden_dim": 128,
+        "tgt_layers": 1,
+        "decode": "greedy",
+        "dropout": 0.2
+    }
+}
